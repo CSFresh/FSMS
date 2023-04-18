@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.1//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amanda.fsms.dao.mapper.UserLoginMapper">
+
+    <select id="selectUser"
+            resultType="com.amanda.fsms.data.UserLoginData">
+        SELECT * FROM `userLogin`
+        WHERE 1 == 1
+        <if test="userName != null">
+            AND `userName` = #{userName}
+        </if>
+        <if test="password != null">
+            AND `password` = #{password}
+        </if>
+    </select>
+
+    <select id="selectCount"
+            resultType="java.lang.Integer">
+        SELECT count(*) FROM `userLogin`
+    </select>
+</mapper>

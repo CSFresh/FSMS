@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="46fff1f5-6db7-40c7-99e7-2dc63f56b1ac" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/FsmsApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/constant/CPConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/constant/CPData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/constant/CPDetailScore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/controller/DoWorkController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/controller/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/controller/UserLoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/dao/mapper/UserLoginMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/dao/mapper/UserLoginMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/dao/mapper/UserTypeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/AreaAndScoreData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/AreaData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/AreaDetailScore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/AreaScoreResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/CPScoreData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/CPScoreResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/MergeCalculateResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/QueryAreaRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/ScoreData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/ScoreEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/ScoreRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/UserData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/UserLoginData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/UserLoginResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/service/DoWorkService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/service/UserLoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/service/impl/UserLoginServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com.amanda.fsms.dao.mapper/UserLoginMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/amanda/fsms/FsmsApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="FxmlFile" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="C:\Users\jingji\.m2\repository" />
+        <option name="mavenHome" value="C:/Program Files/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="C:\Users\jingji\.m2\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+    <option name="disabledProfiles">
+      <list>
+        <option value="qunhe-nexus" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2LYpfjL4fFPt0grX1KZWiaXVpX0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FSMS_System" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.42334908" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.testRunning" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\fsms\src\main\resources\com.amanda.fsms.dao.mapper" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\fsms\src\main\java\com\amanda\fsms\dao\mapper" />
+      <recent name="D:\workspace\fsms\src\main\resources\mappers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.FsmsApplication">
+    <configuration name="FsmsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.amanda.fsms.FsmsApplication" />
+      <module name="fsms" />
+      <shortenClasspath name="MANIFEST" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.amanda.fsms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FsmsApplicationTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.amanda.fsms.FsmsApplicationTests" />
+      <module name="fsms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.amanda.fsms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FsmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="fsms" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.amanda.fsms.FsmsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FsmsApplication" />
+        <item itemvalue="Application.FsmsApplicationTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="46fff1f5-6db7-40c7-99e7-2dc63f56b1ac" name="Default Changelist" comment="" />
+      <created>1676057976014</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676057976014</updated>
+      <workItem from="1681814153844" duration="344000" />
+      <workItem from="1681814513589" duration="270000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="3112" y="174" key="#Project_Structure" timestamp="1677872671837">
+      <screen x="2560" y="0" width="1920" height="1032" />
+    </state>
+    <state x="3112" y="174" key="#Project_Structure/0.0.1707.912/2560.0.1920.1032@2560.0.1920.1032" timestamp="1677872671837" />
+    <state x="309" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1680252722414">
+      <screen x="0" y="0" width="1707" height="912" />
+    </state>
+    <state x="2908" y="127" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.912/2560.0.1920.1032@2560.0.1920.1032" timestamp="1677873937921" />
+    <state x="309" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.912@0.0.1707.912" timestamp="1680252722414" />
+    <state x="659" y="166" key="#com.intellij.ide.util.MemberChooser" timestamp="1676344089411">
+      <screen x="0" y="0" width="1707" height="912" />
+    </state>
+    <state x="659" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1707.912@0.0.1707.912" timestamp="1676344089411" />
+    <state x="3145" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1677871020672">
+      <screen x="2560" y="0" width="1920" height="1032" />
+    </state>
+    <state x="3145" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1707.912/2560.0.1920.1032@2560.0.1920.1032" timestamp="1677871020672" />
+    <state x="609" y="159" key="#xdebugger.evaluate" timestamp="1678101625508">
+      <screen x="0" y="0" width="1707" height="912" />
+    </state>
+    <state x="609" y="159" key="#xdebugger.evaluate/0.0.1707.912@0.0.1707.912" timestamp="1678101625508" />
+    <state x="713" y="242" key="FileChooserDialogImpl" timestamp="1681814395854">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="634" y="212" key="FileChooserDialogImpl/0.0.1707.912/2560.0.1920.1032@0.0.1707.912" timestamp="1677870769706" />
+    <state x="634" y="212" key="FileChooserDialogImpl/0.0.1707.912@0.0.1707.912" timestamp="1679075364725" />
+    <state x="713" y="242" key="FileChooserDialogImpl/0.0.1920.1040/-1920.-98.1920.1040@0.0.1920.1040" timestamp="1681814395854" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1681814637178">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1663" height="279" key="GridCell.Tab.0.bottom/0.0.1707.912/2560.0.1920.1032@0.0.1707.912" timestamp="1677878126026" />
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1707.912/2560.0.1920.1032@2560.0.1920.1032" timestamp="1677873923915" />
+    <state width="1663" height="379" key="GridCell.Tab.0.bottom/0.0.1707.912@0.0.1707.912" timestamp="1680285910957" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.-98.1920.1040@0.0.1920.1040" timestamp="1681814637178" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1681814637178">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1663" height="279" key="GridCell.Tab.0.center/0.0.1707.912/2560.0.1920.1032@0.0.1707.912" timestamp="1677878126026" />
+    <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1707.912/2560.0.1920.1032@2560.0.1920.1032" timestamp="1677873923915" />
+    <state width="1663" height="379" key="GridCell.Tab.0.center/0.0.1707.912@0.0.1707.912" timestamp="1680285910957" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.-98.1920.1040@0.0.1920.1040" timestamp="1681814637178" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1681814637177">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1663" height="279" key="GridCell.Tab.0.left/0.0.1707.912/2560.0.1920.1032@0.0.1707.912" timestamp="1677878126026" />
+    <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1707.912/2560.0.1920.1032@2560.0.1920.1032" timestamp="1677873923915" />
+    <state width="1663" height="379" key="GridCell.Tab.0.left/0.0.1707.912@0.0.1707.912" timestamp="1680285910957" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.-98.1920.1040@0.0.1920.1040" timestamp="1681814637177" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1681814637178">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1663" height="279" key="GridCell.Tab.0.right/0.0.1707.912/2560.0.1920.1032@0.0.1707.912" timestamp="1677878126026" />
+    <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1707.912/2560.0.1920.1032@2560.0.1920.1032" timestamp="1677873923915" />
+    <state width="1663" height="379" key="GridCell.Tab.0.right/0.0.1707.912@0.0.1707.912" timestamp="1680285910957" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.-98.1920.1040@0.0.1920.1040" timestamp="1681814637178" />
+    <state width="1877" height="282" key="GridCell.Tab.1.bottom" timestamp="1681814637178">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1663" height="296" key="GridCell.Tab.1.bottom/0.0.1707.912/2560.0.1920.1032@0.0.1707.912" timestamp="1677877893938" />
+    <state width="1877" height="344" key="GridCell.Tab.1.bottom/0.0.1707.912/2560.0.1920.1032@2560.0.1920.1032" timestamp="1677873870369" />
+    <state width="1663" height="296" key="GridCell.Tab.1.bottom/0.0.1707.912@0.0.1707.912" timestamp="1678290398300" />
+    <state width="1877" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.-98.1920.1040@0.0.1920.1040" timestamp="1681814637178" />
+    <state width="1877" height="282" key="GridCell.Tab.1.center" timestamp="1681814637178">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1663" height="296" key="GridCell.Tab.1.center/0.0.1707.912/2560.0.1920.1032@0.0.1707.912" timestamp="1677877893938" />
+    <state width="1877" height="344" key="GridCell.Tab.1.center/0.0.1707.912/2560.0.1920.1032@2560.0.1920.1032" timestamp="1677873870369" />
+    <state width="1663" height="296" key="GridCell.Tab.1.center/0.0.1707.912@0.0.1707.912" timestamp="1678290398299" />
+    <state width="1877" height="282" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.-98.1920.1040@0.0.1920.1040" timestamp="1681814637178" />
+    <state width="1877" height="282" key="GridCell.Tab.1.left" timestamp="1681814637178">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1663" height="296" key="GridCell.Tab.1.left/0.0.1707.912/2560.0.1920.1032@0.0.1707.912" timestamp="1677877893938" />
+    <state width="1877" height="344" key="GridCell.Tab.1.left/0.0.1707.912/2560.0.1920.1032@2560.0.1920.1032" timestamp="1677873870369" />
+    <state width="1663" height="296" key="GridCell.Tab.1.left/0.0.1707.912@0.0.1707.912" timestamp="1678290398299" />
+    <state width="1877" height="282" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.-98.1920.1040@0.0.1920.1040" timestamp="1681814637178" />
+    <state width="1877" height="282" key="GridCell.Tab.1.right" timestamp="1681814637178">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1663" height="296" key="GridCell.Tab.1.right/0.0.1707.912/2560.0.1920.1032@0.0.1707.912" timestamp="1677877893938" />
+    <state width="1877" height="344" key="GridCell.Tab.1.right/0.0.1707.912/2560.0.1920.1032@2560.0.1920.1032" timestamp="1677873870369" />
+    <state width="1663" height="296" key="GridCell.Tab.1.right/0.0.1707.912@0.0.1707.912" timestamp="1678290398299" />
+    <state width="1877" height="282" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.-98.1920.1040@0.0.1920.1040" timestamp="1681814637178" />
+    <state x="399" y="113" key="SettingsEditor" timestamp="1681814403609">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="355" y="99" key="SettingsEditor/0.0.1707.912/2560.0.1920.1032@0.0.1707.912" timestamp="1677870268582" />
+    <state x="355" y="99" key="SettingsEditor/0.0.1707.912@0.0.1707.912" timestamp="1681810462281" />
+    <state x="399" y="113" key="SettingsEditor/0.0.1920.1040/-1920.-98.1920.1040@0.0.1920.1040" timestamp="1681814403609" />
+    <state width="609" height="446" key="SwitcherDM" timestamp="1678807193624">
+      <screen x="0" y="0" width="1707" height="912" />
+    </state>
+    <state width="609" height="446" key="SwitcherDM/0.0.1707.912/2560.0.1920.1032@0.0.1707.912" timestamp="1678807193624" />
+    <state x="538" y="281" key="com.intellij.ide.util.TipDialog" timestamp="1681812703429">
+      <screen x="0" y="0" width="1707" height="912" />
+    </state>
+    <state x="538" y="281" key="com.intellij.ide.util.TipDialog/0.0.1707.912/2560.0.1920.1032@0.0.1707.912" timestamp="1677868419602" />
+    <state x="538" y="281" key="com.intellij.ide.util.TipDialog/0.0.1707.912@0.0.1707.912" timestamp="1681812703429" />
+    <state x="410" y="193" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1678289486736">
+      <screen x="0" y="0" width="1707" height="912" />
+    </state>
+    <state x="410" y="193" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1707.912@0.0.1707.912" timestamp="1678289486736" />
+    <state x="467" y="156" width="975" height="600" key="find.popup" timestamp="1680252670621">
+      <screen x="0" y="0" width="1707" height="912" />
+    </state>
+    <state x="467" y="156" width="975" height="600" key="find.popup/0.0.1707.912/2560.0.1920.1032@0.0.1707.912" timestamp="1677870128684" />
+    <state x="467" y="156" width="975" height="600" key="find.popup/0.0.1707.912@0.0.1707.912" timestamp="1680252670621" />
+    <state x="510" y="209" key="run.anything.popup" timestamp="1679079549319">
+      <screen x="0" y="0" width="1707" height="912" />
+    </state>
+    <state x="510" y="209" key="run.anything.popup/0.0.1707.912/2560.0.1920.1032@0.0.1707.912" timestamp="1677877854080" />
+    <state x="510" y="209" key="run.anything.popup/0.0.1707.912@0.0.1707.912" timestamp="1679079549319" />
+    <state x="580" y="220" width="757" height="775" key="search.everywhere.popup" timestamp="1681814772515">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="516" y="193" width="673" height="679" key="search.everywhere.popup/0.0.1707.912/2560.0.1920.1032@0.0.1707.912" timestamp="1677876124667" />
+    <state x="3140" y="218" width="756" height="768" key="search.everywhere.popup/0.0.1707.912/2560.0.1920.1032@2560.0.1920.1032" timestamp="1677873208791" />
+    <state x="516" y="193" width="672" height="678" key="search.everywhere.popup/0.0.1707.912@0.0.1707.912" timestamp="1677686605365" />
+    <state x="580" y="220" width="757" height="775" key="search.everywhere.popup/0.0.1920.1040/-1920.-98.1920.1040@0.0.1920.1040" timestamp="1681814772515" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/amanda/fsms/controller/UserLoginController.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/amanda/fsms/service/impl/UserLoginServiceImpl.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/amanda/fsms/service/impl/UserLoginServiceImpl.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
