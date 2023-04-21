@@ -2,40 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46fff1f5-6db7-40c7-99e7-2dc63f56b1ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/FsmsApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/constant/CPConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/constant/CPData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/constant/CPDetailScore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/controller/DoWorkController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/controller/UserLoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/dao/mapper/UserLoginMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/dao/mapper/UserLoginMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/dao/mapper/UserTypeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/AreaAndScoreData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/AreaData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/AreaDetailScore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/AreaScoreResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/CPScoreData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/CPScoreResp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/MergeCalculateResp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/QueryAreaRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/ScoreData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/ScoreEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/ScoreRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/UserData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/UserLoginData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/UserLoginResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/service/DoWorkService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/service/UserLoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/service/impl/UserLoginServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com.amanda.fsms.dao.mapper/UserLoginMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/amanda/fsms/FsmsApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/constant/AreaEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/constant/FollowerEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/AuditDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/AuditResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/AuditTeam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/CPNoScore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/CPScoreAndPassCnt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/DepartmentAuditDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/FollowerAndComment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/FollowerAndProblemDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/GenerateReportRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/IndividualReportResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/MergedReportResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/ProblemDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/ProblemDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/Report.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/UpLoadResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/UploadRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/service/FileUploadService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/service/impl/DoWorkServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/service/impl/FileUploadServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/controller/DoWorkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/controller/DoWorkController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/ScoreData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/ScoreData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/service/DoWorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/service/DoWorkService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +37,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
       </list>
@@ -84,7 +76,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FSMS_System" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../workSpace/geom-translation-service" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -155,7 +147,7 @@
       <option name="presentableId" value="Default" />
       <updated>1676057976014</updated>
       <workItem from="1681814153844" duration="344000" />
-      <workItem from="1681814513589" duration="270000" />
+      <workItem from="1681814513589" duration="52546000" />
     </task>
     <servers />
   </component>
@@ -172,24 +164,26 @@
     </state>
     <state x="2908" y="127" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.912/2560.0.1920.1032@2560.0.1920.1032" timestamp="1677873937921" />
     <state x="309" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.912@0.0.1707.912" timestamp="1680252722414" />
-    <state x="659" y="166" key="#com.intellij.ide.util.MemberChooser" timestamp="1676344089411">
-      <screen x="0" y="0" width="1707" height="912" />
+    <state x="741" y="189" key="#com.intellij.ide.util.MemberChooser" timestamp="1681918362402">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="659" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1707.912@0.0.1707.912" timestamp="1676344089411" />
-    <state x="3145" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1677871020672">
-      <screen x="2560" y="0" width="1920" height="1032" />
+    <state x="741" y="189" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.-98.1920.1040@0.0.1920.1040" timestamp="1681918362402" />
+    <state x="585" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1682001165751">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="3145" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1707.912/2560.0.1920.1032@2560.0.1920.1032" timestamp="1677871020672" />
+    <state x="585" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1920.-98.1920.1040@0.0.1920.1040" timestamp="1682001165751" />
     <state x="609" y="159" key="#xdebugger.evaluate" timestamp="1678101625508">
       <screen x="0" y="0" width="1707" height="912" />
     </state>
     <state x="609" y="159" key="#xdebugger.evaluate/0.0.1707.912@0.0.1707.912" timestamp="1678101625508" />
-    <state x="713" y="242" key="FileChooserDialogImpl" timestamp="1681814395854">
+    <state x="713" y="242" key="FileChooserDialogImpl" timestamp="1681886177620">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="634" y="212" key="FileChooserDialogImpl/0.0.1707.912/2560.0.1920.1032@0.0.1707.912" timestamp="1677870769706" />
     <state x="634" y="212" key="FileChooserDialogImpl/0.0.1707.912@0.0.1707.912" timestamp="1679075364725" />
-    <state x="713" y="242" key="FileChooserDialogImpl/0.0.1920.1040/-1920.-98.1920.1040@0.0.1920.1040" timestamp="1681814395854" />
+    <state x="713" y="242" key="FileChooserDialogImpl/0.0.1920.1040/-1920.-98.1920.1040@0.0.1920.1040" timestamp="1681886177620" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1681814637178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -265,23 +259,28 @@
       <screen x="0" y="0" width="1707" height="912" />
     </state>
     <state x="410" y="193" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1707.912@0.0.1707.912" timestamp="1678289486736" />
-    <state x="467" y="156" width="975" height="600" key="find.popup" timestamp="1680252670621">
-      <screen x="0" y="0" width="1707" height="912" />
+    <state x="-1398" y="-68" width="1414" height="717" key="dock-window-1" timestamp="1682003294060">
+      <screen x="-1920" y="-98" width="1920" height="1040" />
+    </state>
+    <state x="-1398" y="-68" width="1414" height="717" key="dock-window-1/0.0.1920.1040/-1920.-98.1920.1040@0.0.1920.1040" timestamp="1682003294060" />
+    <state x="525" y="178" width="1097" height="685" key="find.popup" timestamp="1681984478867">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="467" y="156" width="975" height="600" key="find.popup/0.0.1707.912/2560.0.1920.1032@0.0.1707.912" timestamp="1677870128684" />
     <state x="467" y="156" width="975" height="600" key="find.popup/0.0.1707.912@0.0.1707.912" timestamp="1680252670621" />
+    <state x="525" y="178" width="1097" height="685" key="find.popup/0.0.1920.1040/-1920.-98.1920.1040@0.0.1920.1040" timestamp="1681984478867" />
     <state x="510" y="209" key="run.anything.popup" timestamp="1679079549319">
       <screen x="0" y="0" width="1707" height="912" />
     </state>
     <state x="510" y="209" key="run.anything.popup/0.0.1707.912/2560.0.1920.1032@0.0.1707.912" timestamp="1677877854080" />
     <state x="510" y="209" key="run.anything.popup/0.0.1707.912@0.0.1707.912" timestamp="1679079549319" />
-    <state x="580" y="220" width="757" height="775" key="search.everywhere.popup" timestamp="1681814772515">
+    <state x="580" y="220" width="757" height="775" key="search.everywhere.popup" timestamp="1681978582183">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="516" y="193" width="673" height="679" key="search.everywhere.popup/0.0.1707.912/2560.0.1920.1032@0.0.1707.912" timestamp="1677876124667" />
     <state x="3140" y="218" width="756" height="768" key="search.everywhere.popup/0.0.1707.912/2560.0.1920.1032@2560.0.1920.1032" timestamp="1677873208791" />
     <state x="516" y="193" width="672" height="678" key="search.everywhere.popup/0.0.1707.912@0.0.1707.912" timestamp="1677686605365" />
-    <state x="580" y="220" width="757" height="775" key="search.everywhere.popup/0.0.1920.1040/-1920.-98.1920.1040@0.0.1920.1040" timestamp="1681814772515" />
+    <state x="580" y="220" width="757" height="775" key="search.everywhere.popup/0.0.1920.1040/-1920.-98.1920.1040@0.0.1920.1040" timestamp="1681978582183" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
