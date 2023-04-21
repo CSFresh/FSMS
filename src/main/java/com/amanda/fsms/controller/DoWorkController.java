@@ -43,7 +43,7 @@ public class DoWorkController {
     public IndividualReportResponse calculateIndividual(GenerateReportRequest generateReportRequest){
         final IndividualReportResponse individualReportResponse = doWorkService.calculateIndividual(
                 generateReportRequest);
-        return null;
+        return individualReportResponse;
     }
 
     @PostMapping("daily/merge")

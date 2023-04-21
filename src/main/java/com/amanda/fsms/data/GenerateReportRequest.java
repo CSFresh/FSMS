@@ -15,7 +15,7 @@ public class GenerateReportRequest {
 
     private Integer userId;
     private String enterprise;
-    private String auditTime;
+    private Long auditTime;
     /**
      * 1 月审
      * 2 日审

@@ -15,7 +15,7 @@ import java.util.List;
 public class IndividualReportResponse {
 
     private List<String> auditTeam;
-    private String auditTime;
+    private Long auditTime;
 
     /**
      * 独立计算的报告所需要的所有数据

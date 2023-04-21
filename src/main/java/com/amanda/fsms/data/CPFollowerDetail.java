@@ -7,21 +7,18 @@ import java.io.File;
 import java.sql.Timestamp;
 import java.util.List;
 
-/**
- * @author jingji
- * @Date: 2023/4/19 22:48
- */
 @Getter
 @Setter
-public class ProblemDetail {
+public class CPFollowerDetail {
+
     private String problemId;
     private Integer CP;
     private Integer No;
     private String standard;
     private Integer score;
-    private String auditScore;
+    private Integer auditScore;
     private String auditRecord;
-    private List<File> files;
+    private List<String> filesKey;
     private String follower;
     private Long timestamp;
     private String progress;

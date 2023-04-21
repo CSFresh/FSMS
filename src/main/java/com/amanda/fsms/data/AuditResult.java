@@ -10,7 +10,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class AuditResult {
-    private String no;
+    private Integer CP;
     private String policy;
     private Integer passCnt = 0;
     private Integer lowRiskFailCnt = 0;

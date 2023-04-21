@@ -4,7 +4,9 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author jingji
@@ -30,9 +32,20 @@ public class Report {
     private Double finalScore;
 
     /**
+     *
+     */
+    private Map<String,Integer> followerProblemCntMap = new HashMap<>();
+
+    /**
      * 出问题的具体细节及相应的跟进人
      */
     private List<FollowerAndProblemDetail> followerAndProblemDetailList = new ArrayList<>();
+
+    /**
+     * 出问题的CP点和具体的跟进人
+     */
+    private List<CPFollowerDetail> cpFollowerDetailList = new ArrayList<>();
+
     /**
      * 最近三次的审核结果
      * Score CP Time
@@ -61,6 +74,10 @@ public class Report {
 
     public void addProblemCnt(){
         this.problemCount+=1;
+    }
+
+    public void addFollowerProblemCnt(String follower){
+        followerProblemCntMap.put(follower,followerProblemCntMap.getOrDefault(follower,1)+1);
     }
 
 }

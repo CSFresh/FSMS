@@ -15,5 +15,5 @@ import java.util.List;
 public class FollowerAndComment {
     private Integer no;
     private String comment;
-    private Integer follower;
+    private String follower;
 }
