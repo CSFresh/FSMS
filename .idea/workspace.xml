@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46fff1f5-6db7-40c7-99e7-2dc63f56b1ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/constant/AreaEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/constant/FollowerEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/AuditDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/AuditResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/AuditTeam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/CPNoScore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/CPScoreAndPassCnt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/DepartmentAuditDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/FollowerAndComment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/FollowerAndProblemDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/GenerateReportRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/IndividualReportResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/MergedReportResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/ProblemDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/ProblemDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/Report.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/UpLoadResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/UploadRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/service/FileUploadService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/service/impl/DoWorkServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/service/impl/FileUploadServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/controller/DoWorkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/controller/DoWorkController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/ScoreData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/data/ScoreData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/service/DoWorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/service/DoWorkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/service/impl/DoWorkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/amanda/fsms/service/impl/DoWorkServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +122,7 @@
       <option name="presentableId" value="Default" />
       <updated>1676057976014</updated>
       <workItem from="1681814153844" duration="344000" />
-      <workItem from="1681814513589" duration="52546000" />
+      <workItem from="1681814513589" duration="55488000" />
     </task>
     <servers />
   </component>
@@ -259,10 +234,10 @@
       <screen x="0" y="0" width="1707" height="912" />
     </state>
     <state x="410" y="193" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1707.912@0.0.1707.912" timestamp="1678289486736" />
-    <state x="-1398" y="-68" width="1414" height="717" key="dock-window-1" timestamp="1682003294060">
+    <state x="-1398" y="-68" width="1414" height="717" key="dock-window-1" timestamp="1682066208576">
       <screen x="-1920" y="-98" width="1920" height="1040" />
     </state>
-    <state x="-1398" y="-68" width="1414" height="717" key="dock-window-1/0.0.1920.1040/-1920.-98.1920.1040@0.0.1920.1040" timestamp="1682003294060" />
+    <state x="-1398" y="-68" width="1414" height="717" key="dock-window-1/0.0.1920.1040/-1920.-98.1920.1040@0.0.1920.1040" timestamp="1682066208576" />
     <state x="525" y="178" width="1097" height="685" key="find.popup" timestamp="1681984478867">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

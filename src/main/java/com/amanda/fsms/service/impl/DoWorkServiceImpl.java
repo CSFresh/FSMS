@@ -163,8 +163,17 @@ public class DoWorkServiceImpl implements DoWorkService {
         //这个是最终的统计得分，每个区域的实际得分，算分用的。
         Map<Integer, List<CPNoScore>> map = new HashMap<>();
         for (AreaAndScoreData areaAndScoreData : areaAndScoreDataList) {
+            Set<Integer> followerSet = new HashSet<>();
+
             final List<CPScoreData> cpScoreDataList = areaAndScoreData.getCpScoreDataList();
             for (CPScoreData cpScoreData : cpScoreDataList) {
+                final Integer cp = cpScoreData.getCP();
+                final CPData cpData = cpConstant.getCpDataList().get(cp - 1);
+                //评分标准
+                final List<CPDetailScore> cpDetailScoreList = cpData.getCpDetailScoreList();
+                final Map<String, CPDetailScore> noToDetailScoreMap =
+                        cpDetailScoreList.stream().collect(
+                                Collectors.toMap(CPDetailScore::getNo, x -> x));
                 AuditResult auditResult = new AuditResult();
                 auditResultList.add(auditResult);
                 final List<ScoreData> list = cpScoreData.getList();
@@ -175,6 +184,9 @@ public class DoWorkServiceImpl implements DoWorkService {
                 final List<CPNoScore> cpNoScores = map.get(cpScoreData.getCP());
                 CPNoScore tmpcpNoScore = null;
                 for (ScoreData scoreData : list) {
+                    Boolean succcess = true;
+                    String scoreKey = cp + "-" + scoreData.getCPNo();
+                    final CPDetailScore cpDetailScore = noToDetailScoreMap.get(scoreKey);
                     for (CPNoScore cpNoScore : cpNoScores) {
                         if (cpNoScore.getNo() == scoreData.getCPNo()) {
                             tmpcpNoScore = cpNoScore;
@@ -205,6 +217,47 @@ public class DoWorkServiceImpl implements DoWorkService {
                         if (tmpcpNoScore != null) {
                             tmpcpNoScore.setActualScore(0);
                             continue;
+                        }
+                        final List<FollowerAndComment> followerAndComments =
+                                scoreData.getFollowerAndComments();
+                        final List<FollowerAndProblemDetail> followerAndProblemDetailList =
+                                report.getFollowerAndProblemDetailList();
+                        for (FollowerAndComment followerAndComment : followerAndComments) {
+                            if (!followerSet.contains(followerAndComment.getFollower())) {
+                                FollowerAndProblemDetail followerAndProblemDetail =
+                                        new FollowerAndProblemDetail();
+                                followerAndProblemDetailList.add(followerAndProblemDetail);
+                                followerAndProblemDetail.setFollower(
+                                        FollowerEnum.getById(followerAndComment.getFollower())
+                                                .name());
+                                final List<ProblemDetail> problemDetailList =
+                                        followerAndProblemDetail.getProblemDetailList();
+                                ProblemDetail problemDetail = new ProblemDetail();
+                                String uuid = UUID.randomUUID().toString();
+                                problemDetail.setProblemId(uuid);
+                                problemDetail.setAuditRecord(followerAndComment.getComment());
+                                problemDetail.setAuditScore("N");
+                                problemDetail.setCP(scoreData.getCPNo());
+                                problemDetail.setFollower(
+                                        FollowerEnum.getById(followerAndComment.getFollower())
+                                                .name());
+                                problemDetail.setNo(followerAndComment.getNo());
+                                problemDetail.setScore(cpDetailScore.getScore());
+                                problemDetail.setStandard(cpDetailScore.getStandard());
+                                problemDetailList.add(problemDetail);
+                                //todo
+                                //添加文件
+                                final Boolean isHighRisk = cpDetailScore.getIsHighRisk();
+                                if (isHighRisk) {
+                                    auditResult.addHighRiskFailCnt();
+                                    succcess = false;
+                                } else if (cpDetailScore.getScore() == 3) {
+                                    auditResult.addMiddleRiskFailCnt();
+                                } else {
+                                    auditResult.addLowRiskFailCnt();
+                                }
+                                followerAndProblemDetailList.add(followerAndProblemDetail);
+                            }
                         }
                         final List<CPNoScore> cpNoList = map.get(cpScoreData.getCP());
                         CPNoScore cpNoScore = new CPNoScore();
