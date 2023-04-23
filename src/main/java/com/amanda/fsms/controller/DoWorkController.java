@@ -28,9 +28,9 @@ public class DoWorkController {
 
     @GetMapping("/area")
     public List<AreaData> getAreaOfHotel(){
-        System.out.println("123");
-        return null;
+       return doWorkService.getAllArea();
     }
+
 
 
     @GetMapping("/start")
@@ -61,5 +61,10 @@ public class DoWorkController {
             @RequestBody final UploadRequest uploadRequest) {
         fileUploadService.handleFileUpload(file,uploadRequest);
         return null;
+    }
+
+    @PostMapping("/CPInfo")
+    public CPAreaResponse getCPInfo(@RequestBody final List<String> area){
+        return doWorkService.getCPInfo(area);
     }
 }

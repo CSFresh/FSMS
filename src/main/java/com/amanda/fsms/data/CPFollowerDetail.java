@@ -14,12 +14,14 @@ public class CPFollowerDetail {
     private String problemId;
     private Integer CP;
     private Integer No;
+    private String area;
     private String standard;
     private Integer score;
     private Integer auditScore;
     private String auditRecord;
     private List<String> filesKey;
-    private String follower;
+    private List<String> followers;
     private Long timestamp;
     private String progress;
+    private Integer riskLevel;
 }

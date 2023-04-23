@@ -7,5 +7,5 @@ import lombok.Setter;
 @Setter
 public class AreaData {
     private String area;
-    private Long id;
+    private Integer id;
 }

@@ -13,7 +13,6 @@ import javax.annotation.Resource;
 @Repository
 @Mapper
 public interface UserLoginMapper {
-    @Select("SELECT * FROM userLogin where `userName` =#{userName} and `password` =#{password}")
+    @Select("SELECT * FROM userLogin where `name` =#{name} and `password` =#{password}")
     UserLoginData selectUser(String userName, String password);
-
 }

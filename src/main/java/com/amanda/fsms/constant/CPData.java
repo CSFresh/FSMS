@@ -10,6 +10,7 @@ import java.util.List;
 @Setter
 public class CPData {
     private Integer CP;
+    private String policy;
     private final List<CPDetailScore> cpDetailScoreList;
     public CPData(){
         cpDetailScoreList = new ArrayList<>();

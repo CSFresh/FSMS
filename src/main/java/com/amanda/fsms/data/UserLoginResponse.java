@@ -8,4 +8,7 @@ import lombok.Setter;
 public class UserLoginResponse {
 
     private UserData userData;
+    private String msg;
+    //200没问题  //500错误
+    private Integer code;
 }

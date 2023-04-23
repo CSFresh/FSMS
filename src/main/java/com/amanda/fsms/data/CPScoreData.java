@@ -9,5 +9,5 @@ import java.util.List;
 @Setter
 public class CPScoreData {
     private Integer CP;
-    private List<ScoreData> list;
+    private List<ScoreData> scoreDataList;
 }

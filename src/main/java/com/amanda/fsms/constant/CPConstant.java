@@ -3,15 +3,49 @@ package com.amanda.fsms.constant;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.awt.geom.Area;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Getter
 @Setter
 public class CPConstant {
     private List<CPData> cpDataList = new ArrayList<>();
 
+    private List<String> areaList = new ArrayList<>();
+
+    private Map<Integer,List<Integer>> areaToCPMap = new HashMap<>();
+
     public CPConstant(){
+        final AreaEnum[] values = AreaEnum.values();
+        for (int i = 0;i<values.length;++i){
+            final String area = values[i].getArea();
+            areaList.add(area);
+        }
+
+        for (int i = 1;i<=17;++i){
+            areaToCPMap.put(i,new ArrayList<>());
+        }
+        areaToCPMap.get(1).addAll(Arrays.asList(2,3,4,5,6,10,11,12,13,14,15,16));
+        areaToCPMap.get(2).addAll(Arrays.asList(2,3,4,5,6,7,8,9,10,11,13,14,15,16));
+        areaToCPMap.get(3).addAll(Arrays.asList(2,3,4,5,6,11,12,13,14,15,16));
+        areaToCPMap.get(4).addAll(Arrays.asList(2,3,4,5,6,7,8,9,10,13,14,15,16));
+        areaToCPMap.get(5).addAll(Arrays.asList(2,3,4,5,6,11,12,13,14,15,16));
+        areaToCPMap.get(6).addAll(Arrays.asList(2,3,4,5,6,7,13,14,15,16));
+        areaToCPMap.get(7).addAll(Arrays.asList(2,5,6,10,11,12,13,14,15,16));
+        areaToCPMap.get(8).addAll(Arrays.asList(2,3,4,5,6,7,8,9,10,11,13,14,15,16));
+        areaToCPMap.get(9).addAll(Arrays.asList(2,3,4,5,6,7,11,13,14,15,16));
+        areaToCPMap.get(10).addAll(Arrays.asList(2,3,4,5,6,11,12,13,14,15,16));
+        areaToCPMap.get(11).addAll(Arrays.asList(2,3,4,5,6,7,8,9,10,11,13,14,15,16));
+        areaToCPMap.get(12).addAll(Arrays.asList(2,3,4,5,11,12,13,14));
+        areaToCPMap.get(13).addAll(Arrays.asList(2,3,4,5,6,11,12,13,14,15,16));
+        areaToCPMap.get(14).addAll(Arrays.asList(2,3,4,6,14,15,16));
+        areaToCPMap.get(15).addAll(Arrays.asList(2,14,15,16));
+        areaToCPMap.get(16).addAll(Arrays.asList(2,3,4,5,14));
+        areaToCPMap.get(17).addAll(Arrays.asList(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19));
 
         //cp1
         CPData cpData1 = new CPData();

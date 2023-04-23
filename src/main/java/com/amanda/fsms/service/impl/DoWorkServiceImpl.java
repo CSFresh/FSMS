@@ -1,15 +1,19 @@
 package com.amanda.fsms.service.impl;
 
+import com.amanda.fsms.constant.AreaEnum;
 import com.amanda.fsms.constant.CPConstant;
 import com.amanda.fsms.constant.CPData;
 import com.amanda.fsms.constant.CPDetailScore;
 import com.amanda.fsms.constant.FollowerEnum;
+import com.amanda.fsms.dao.mapper.CPFollowerDetailMapper;
 import com.amanda.fsms.data.*;
 import com.amanda.fsms.service.DoWorkService;
 import org.hibernate.validator.constraints.br.CPF;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.xml.xpath.XPath;
+import java.awt.geom.Area;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -26,6 +30,8 @@ import java.util.stream.Collectors;
 @Service
 public class DoWorkServiceImpl implements DoWorkService {
 
+    @Autowired
+    private CPFollowerDetailMapper cpFollowerDetailMapper;
     @Override
     public IndividualReportResponse calculateIndividual(
             final GenerateReportRequest generateReportRequest) {
@@ -59,7 +65,7 @@ public class DoWorkServiceImpl implements DoWorkService {
                 Integer totalScore = 0;//有效Cp点的总分值
                 Integer actualScore = 0;//有效cp点的实际得分
                 //每一个cpNo点 比如cp1-1 cp1-2 cp1-3
-                List<ScoreData> cpNoList = cpScoreData.getList();
+                List<ScoreData> cpNoList = cpScoreData.getScoreDataList();
                 //算每个CP点的得分
                 for (ScoreData scoreData:cpNoList){
                     //CP1-1 CP1-2
@@ -71,7 +77,8 @@ public class DoWorkServiceImpl implements DoWorkService {
                     } else if (scoreData.getAction()=="N"){
                         totalScore+=cpDetailScore.getScore();
                         //下面开始添加评论
-                        cpFollowerDetailList.addAll(convert(scoreData,cpDetailScore.getScore(),0,cpDetailScore.getStandard(), new ArrayList<>(),report));
+                        cpFollowerDetailList.addAll(convert(scoreData,cpDetailScore.getScore(),0,
+                                cpDetailScore.getStandard(), new ArrayList<>(),report,cpDetailScore));
                         if (cpDetailScore.getIsHighRisk()){
                             auditResult.addHighRiskFailCnt();
                             auditResult.setResult("fail");
@@ -103,6 +110,41 @@ public class DoWorkServiceImpl implements DoWorkService {
     }
 
     @Override
+    public CPAreaResponse getCPInfo(final List<String> areaList) {
+        CPAreaResponse cpAreaResponse = new CPAreaResponse();
+        List<AreaAndCPResp> list = new ArrayList<>();
+        cpAreaResponse.setAreaAndCPResps(list);
+        CPConstant cpConstant = new CPConstant();
+        for (String area:areaList){
+            AreaAndCPResp areaAndCPResp = new AreaAndCPResp();
+            final Integer id = AreaEnum.getAreaIdByArea(area).getId();
+            final Map<Integer, List<Integer>> areaToCPMap = cpConstant.getAreaToCPMap();
+            final List<Integer> cpIDList = areaToCPMap.get(id);
+            List<CPData> cpDataList = new ArrayList<>();
+            for (Integer CP:cpIDList){
+                cpDataList.add(cpConstant.getCpDataList().get(CP-1));
+            }
+            areaAndCPResp.setArea(id);
+            areaAndCPResp.setCpDataList(cpDataList);
+            list.add(areaAndCPResp);
+        }
+        return cpAreaResponse;
+    }
+
+    @Override
+    public List<AreaData> getAllArea() {
+        final AreaEnum[] values = AreaEnum.values();
+        List<AreaData> list = new ArrayList<>();
+        for (int i = 0;i<values.length;++i){
+            AreaData areaData = new AreaData();
+            areaData.setArea(values[i].getArea());
+            areaData.setId(values[i].getId());
+            list.add(areaData);
+        }
+        return list;
+    }
+
+    @Override
     public MergedReportResponse calculateMerge(GenerateReportRequest generateReportRequest) {
         return null;
     }
@@ -113,16 +155,25 @@ public class DoWorkServiceImpl implements DoWorkService {
     }
 
 
-    private List<CPFollowerDetail> convert(ScoreData scoreData,Integer score,Integer auditScore,String standard,List<String> path,Report report){
+    private List<CPFollowerDetail> convert(ScoreData scoreData,Integer score,Integer auditScore,
+            String standard,List<String> path,Report report,CPDetailScore cpDetailScore){
         List<FollowerAndComment> followerAndComments = scoreData.getFollowerAndComments();
         List<CPFollowerDetail> list = new ArrayList<>();
         for (FollowerAndComment followerAndComment:followerAndComments){
             CPFollowerDetail cpFollowerDetail = new CPFollowerDetail();
             cpFollowerDetail.setAuditRecord(followerAndComment.getComment());
             cpFollowerDetail.setAuditScore(auditScore);
+            if (cpDetailScore.getIsHighRisk()){
+                cpFollowerDetail.setRiskLevel(3);
+            } else if (cpDetailScore.getScore()==3){
+                cpFollowerDetail.setRiskLevel(2);
+            } else{
+                cpFollowerDetail.setRiskLevel(1);
+            }
             cpFollowerDetail.setCP(scoreData.getCP());
-            cpFollowerDetail.setFollower(followerAndComment.getFollower());
-            report.addFollowerProblemCnt(followerAndComment.getFollower());
+            cpFollowerDetail.setArea(report.getArea().get(0));
+            cpFollowerDetail.setFollowers(followerAndComment.getFollowers());
+            report.addFollowerProblemCnt(followerAndComment.getFollowers());
             report.addProblemCnt();
             cpFollowerDetail.setNo(scoreData.getCPNo());
             cpFollowerDetail.setScore(score);
@@ -130,7 +181,22 @@ public class DoWorkServiceImpl implements DoWorkService {
             cpFollowerDetail.setProblemId(UUID.randomUUID().toString());
             cpFollowerDetail.setFilesKey(path);
             list.add(cpFollowerDetail);
+            insert(cpFollowerDetail);
         }
         return list;
+    }
+
+    private void insert(CPFollowerDetail cpFollowerDetail){
+        final List<String> followers = cpFollowerDetail.getFollowers();
+        for (String follower:followers){
+            CPFollowerDetailDTO cpFollowerDetailDTO = new CPFollowerDetailDTO();
+            cpFollowerDetailDTO.setArea(cpFollowerDetail.getArea());
+            cpFollowerDetailDTO.setCP(cpFollowerDetail.getCP());
+            cpFollowerDetailDTO.setRiskLevel(cpFollowerDetail.getRiskLevel());
+            cpFollowerDetailDTO.setProblemId(cpFollowerDetail.getProblemId());
+            cpFollowerDetailDTO.setNo(cpFollowerDetail.getNo());
+            cpFollowerDetailDTO.setFollower(follower);
+            cpFollowerDetailMapper.insertProblemDetail(cpFollowerDetailDTO);
+        }
     }
 }

@@ -1,5 +1,6 @@
 package com.amanda.fsms;
 
+import com.amanda.fsms.dao.mapper.CPFollowerDetailMapper;
 import com.amanda.fsms.data.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -13,18 +14,17 @@ public class Test {
         generateReportRequest.setUserId(123);
         generateReportRequest.setAuditTeam(new ArrayList<>());
         List<String> areaList = new ArrayList<>();
-        areaList.add("123");
-        areaList.add("321");
+        areaList.add("ADD Restaurant");
         generateReportRequest.setAuditTeam(areaList);
         generateReportRequest.setAuditTime(122132131L);
         generateReportRequest.setAuditType(1);
         generateReportRequest.setCalcuType(1);
-        generateReportRequest.setEnterprise("中因皇冠");
+        generateReportRequest.setEnterprise("中茵皇冠");
         List<AreaAndScoreData> areaAndScoreDataList = new ArrayList<>();
         generateReportRequest.setAreaAndScoreDataList(areaAndScoreDataList);
         AreaAndScoreData areaAndScoreData = new AreaAndScoreData();
         areaAndScoreDataList.add(areaAndScoreData);
-        areaAndScoreData.setArea("厨房");
+        areaAndScoreData.setArea("ADD Restaurant");
         areaAndScoreData.setId(1);
         List<CPScoreData> cpScoreDataList = new ArrayList<>();
         areaAndScoreData.setCpScoreDataList(cpScoreDataList);
@@ -32,7 +32,7 @@ public class Test {
         cpScoreData.setCP(1);
         cpScoreDataList.add(cpScoreData);
         List<ScoreData> list = new ArrayList<>();
-        cpScoreData.setList(list);
+        cpScoreData.setScoreDataList(list);
 
         //cp1-1
         ScoreData scoreData = new ScoreData();
@@ -42,8 +42,12 @@ public class Test {
         List<FollowerAndComment> followerAndComments = new ArrayList<>();
         scoreData.setFollowerAndComments(followerAndComments);
         FollowerAndComment followerAndComment = new FollowerAndComment();
-        followerAndComment.setComment("不好");
-        followerAndComment.setFollower("厨房");
+        followerAndComment.setComment("脏乱差");
+        List<String> followers = new ArrayList<>();
+        followers.add("收货部");
+        followers.add("工程部");
+        followers.add("ADD Restaurant");
+        followerAndComment.setFollowers(followers);
         followerAndComment.setNo(1);
         followerAndComments.add(followerAndComment);
         list.add(scoreData);

@@ -24,7 +24,7 @@ public class UserLoginServiceImpl implements UserLoginService {
     @Override
     public UserData userLogin(UserLoginData user) {
 
-        UserLoginData userLoginData = userLoginMapper.selectUser(user.getUserName(), user.getPassword());
+        UserLoginData userLoginData = userLoginMapper.selectUser(user.getName(), user.getPassword());
         if (userLoginData==null){
             return null;
         }

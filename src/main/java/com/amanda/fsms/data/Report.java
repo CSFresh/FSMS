@@ -76,8 +76,10 @@ public class Report {
         this.problemCount+=1;
     }
 
-    public void addFollowerProblemCnt(String follower){
-        followerProblemCntMap.put(follower,followerProblemCntMap.getOrDefault(follower,1)+1);
+    public void addFollowerProblemCnt(List<String> followers){
+        for (String follower:followers){
+            followerProblemCntMap.put(follower,followerProblemCntMap.getOrDefault(follower,0)+1);
+        }
     }
 
 }
