@@ -32,6 +32,8 @@ public class DoWorkServiceImpl implements DoWorkService {
 
     @Autowired
     private CPFollowerDetailMapper cpFollowerDetailMapper;
+
+
     @Override
     public IndividualReportResponse calculateIndividual(
             final GenerateReportRequest generateReportRequest) {
@@ -152,6 +154,12 @@ public class DoWorkServiceImpl implements DoWorkService {
     @Override
     public MergedReportResponse calculateMonthlyMerge(GenerateReportRequest generateReportRequest) {
         return null;
+    }
+
+    @Override
+    public String insertAudit() {
+        String uuid = UUID.randomUUID().toString();
+        return uuid;
     }
 
 

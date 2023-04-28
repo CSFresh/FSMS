@@ -14,6 +14,7 @@ import java.util.List;
 public class GenerateReportRequest {
 
     private Integer userId;
+    private String auditId;
     private String enterprise;
     private Long auditTime;
     /**

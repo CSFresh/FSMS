@@ -15,4 +15,5 @@ public interface DoWorkService {
     List<AreaData> getAllArea();
     MergedReportResponse calculateMerge(GenerateReportRequest generateReportRequest);
     MergedReportResponse calculateMonthlyMerge(GenerateReportRequest generateReportRequest);
+    String insertAudit();
 }

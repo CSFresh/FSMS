@@ -19,5 +19,4 @@ public interface CPFollowerDetailMapper {
             "#{cpFollowerDetailDTO.No}, #{cpFollowerDetailDTO.area}, #{cpFollowerDetailDTO" +
             ".riskLevel}, #{cpFollowerDetailDTO.follower}, #{cpFollowerDetailDTO.timestamp})")
     int insertProblemDetail(@Param("cpFollowerDetailDTO")CPFollowerDetailDTO cpFollowerDetailDTO);
-
 }

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
+import java.util.UUID;
 
 
 @RestController
@@ -33,10 +34,10 @@ public class DoWorkController {
 
 
 
-    @GetMapping("/start")
-    public CPConstant runAudit(Integer userId){
-        CPConstant cpConstant = new CPConstant();
-        return cpConstant;
+    @PostMapping("/start")
+    public String runAudit(){
+        String uuid = UUID.randomUUID().toString();
+        return uuid;
     }
 
     @PostMapping("daily/individual")
